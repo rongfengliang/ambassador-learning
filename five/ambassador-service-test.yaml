@@ -1,0 +1,12 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ambassador
+  namespace: test
+spec:
+  type: NodePort
+  ports:
+   - port: 80
+  selector:
+    service: ambassador
